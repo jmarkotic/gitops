@@ -2,6 +2,7 @@ apiVersion: run.tanzu.vmware.com/v1alpha1
 kind: TanzuKubernetesCluster
 metadata:
   name: tkc-app2
+  namespace: ns-tools
 spec:
   distribution:
     version: v1.18
