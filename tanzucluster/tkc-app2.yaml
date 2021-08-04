@@ -1,11 +1,11 @@
 apiVersion: run.tanzu.vmware.com/v1alpha1
 kind: TanzuKubernetesCluster
 metadata:
-  name: tkc-app2
+  name: tkc-cluster1
   namespace: ns-tools
 spec:
   distribution:
-    version: v1.18
+    version: v1.19
   topology:
     controlPlane:
       class: best-effort-small
@@ -14,13 +14,13 @@ spec:
     workers:
       class: best-effort-small
       count: 1
-      storageClass: tanzu-basic-storage-policy 
+      storageClass: tanzu-basic-storage-policy
   settings:
-      network:
+    network:
       cni:
         name: antrea 
       pods:
-        cidrBlocks: ["10.101.0.0/16"]
+        cidrBlocks: ["10.55.0.0/16"]
     storage:
       classes: ["tanzu-basic-storage-policy"]
-      defaultClass: tanzu-basic-storage-policy 
+      defaultClass: tanzu-basic-storage-policy
