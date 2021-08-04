@@ -13,7 +13,7 @@ spec:
       storageClass: tanzu-basic-storage-policy
     workers:
       class: best-effort-small
-      count: 2
+      count: 1
       storageClass: tanzu-basic-storage-policy
   settings:
     network:
