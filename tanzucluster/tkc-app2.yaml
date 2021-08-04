@@ -16,6 +16,11 @@ spec:
       count: 1
       storageClass: tanzu-basic-storage-policy 
   settings:
+      network:
+      cni:
+        name: antrea 
+      pods:
+        cidrBlocks: ["10.101.0.0/16"]
     storage:
       classes: ["tanzu-basic-storage-policy"]
       defaultClass: tanzu-basic-storage-policy 
